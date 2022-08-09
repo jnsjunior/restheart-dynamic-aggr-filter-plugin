@@ -1,0 +1,8 @@
+{
+    "name": "restheart-dynamic-aggr-filter-plugin",
+    "version": "1.0.0",
+    "description": "RestHeart Dynamic Aggregation Filter Plugin",
+    "rh:services": [
+        "index.js"
+    ]
+}
