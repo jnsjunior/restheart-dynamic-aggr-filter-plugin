@@ -44,6 +44,8 @@ runTestCase() {
     echo -e "Test case: $1 ${GREEN}OK${NC}"
   else
     echo -e "Test case: $1 ${RED}ERROR${NC}"
+    echo $expect
+    echo $result
   fi
 }
 
