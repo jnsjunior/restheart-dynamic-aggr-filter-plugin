@@ -20,15 +20,15 @@ function replaceObjects(obj, targetProp, targetValue, replaceValue) {
             for (let prop in theObj) {
                 if (theObj.hasOwnProperty(prop)) {
                     if (prop === targetProp) {
-                        if (theObject[prop] === targetValue) {
-                            theObject[prop] = replaceValue;
+                        if (theObj[prop] === targetValue) {
+                            theObj[prop] = replaceValue;
                         }
                     }
                     if (theObj[prop] instanceof Object ||
                         theObj[prop] instanceof Array) {
                         if (theObj[prop] instanceof Object) {
                             if (theObj[prop].hasOwnProperty(targetProp)) {
-                                if (theObj[prop][targetProp] === targetValue) {
+                                if (theObj[prop][targetProp] === targetValue){
                                     theObj[prop] = replaceValue;
                                 }
                             }
