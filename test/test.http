@@ -1,0 +1,38 @@
+
+PUT http://127.0.0.1:8080/mycoll
+Authorization: Basic admin:secret
+Content-type: application/json
+
+< mycoll.json
+
+###
+
+POST http://127.0.0.1:8080/mycoll
+Authorization: Basic admin:secret
+Content-type: application/json
+
+< mycoll-data.json
+
+###
+
+POST http://127.0.0.1:8080/_dynamic_aggr_filter
+Authorization: Basic admin:secret
+Content-Type: application/json
+
+< test1-request.json
+
+###
+
+POST http://127.0.0.1:8080/_dynamic_aggr_filter
+Authorization: Basic admin:secret
+Content-Type: application/json
+
+< test2-request.json
+
+###
+
+POST http://127.0.0.1:8080/_dynamic_aggr_filter
+Authorization: Basic admin:secret
+Content-Type: application/json
+
+< test3-request.json

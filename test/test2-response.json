@@ -1,0 +1,18 @@
+[
+    {
+        "_id": "journal",
+        "qty": 25
+    },
+    {
+        "_id": "notebook",
+        "qty": 50
+    },
+    {
+        "_id": "planner",
+        "qty": 75
+    },
+    {
+        "_id": "postcard",
+        "qty": 45
+    }
+]

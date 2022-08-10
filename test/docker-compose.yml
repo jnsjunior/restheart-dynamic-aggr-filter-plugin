@@ -1,0 +1,36 @@
+version: "3"
+
+name: resthear-dynamic-aggr-filter-plugin
+services:
+  restheart:
+    image: softinstigate/restheart:6.3.5-graalvm
+    container_name: restheart
+    environment:
+      MONGO_URI: mongodb://mongodb
+    command: ["--envFile", "/opt/restheart/etc/default.properties"]
+    volumes:
+      - ../:/opt/restheart/plugins/restheart-dynamic-aggr-filter-plugin
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://admin:secret@127.0.0.1:8080/ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 60
+      start_period: 40s
+
+  mongodb:
+    image: mongo
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongo mongo:27017/test --quiet
+      interval: 10s
+      timeout: 3s
+      retries: 60
+      start_period: 40s

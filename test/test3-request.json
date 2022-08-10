@@ -1,0 +1,14 @@
+{
+    "Database": "restheart",
+    "Collection": "mycoll",
+    "Aggregation": "myagg2",
+    "Variables": [
+        {
+            "n": {
+                "$gte": 25,
+                "$lt": 100
+            },
+            "i": "journal"
+        }
+    ]
+}

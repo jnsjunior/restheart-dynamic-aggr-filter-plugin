@@ -1,0 +1,10 @@
+{
+    "Database": "restheart",
+    "Collection": "mycoll",
+    "Aggregation": "myagg1",
+    "Variables": [
+        {
+            "n": 25
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "aggrs": [
+        {
+            "stages": [
+                {
+                    "$match": {
+                        "qty": {
+                            "$var": "n"
+                        }
+                    }
+                },
+                {
+                    "$project": {
+                        "_id": "$item",
+                        "qty": "$qty"
+                    }
+                }
+            ],
+            "type": "pipeline",
+            "uri": "myagg1"
+        },
+        {
+            "stages": [
+                {
+                    "$match": {
+                        "qty": {
+                            "$var": "n"
+                        },
+                        "item": {
+                            "$var": "i"
+                        }
+                    }
+                },
+                {
+                    "$project": {
+                        "_id": "$item",
+                        "qty": "$qty",
+                        "size": "$size"
+                    }
+                }
+            ],
+            "type": "pipeline",
+            "uri": "myagg2"
+        }
+    ]
+}

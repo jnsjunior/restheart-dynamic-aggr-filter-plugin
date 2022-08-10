@@ -67,6 +67,16 @@ This aproach avoid turning off [aggregation-check-operators](https://restheart.o
    [{"_id":"journal","qty":25},{"_id":"notebook","qty":50},{"_id":"planner","qty":75},{"_id":"postcard","qty":45}]
    ```
 
+## Automatic tests
+
+1. You can also run the automatic tests by running file test.sh inside test folder. 
+   ```sh
+   cd test
+   chmod +x test
+   ./test
+   ```
+2. Using [Visual Studio Code REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) (file test.http inside test folder)
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
